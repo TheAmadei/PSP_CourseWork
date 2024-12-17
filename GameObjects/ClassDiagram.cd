@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameObjects.AlaskaShip" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAgAAAAAAAAAAAAAACEAAAAAAAAAgACAAAQ=</HashCode>
+      <FileName>Decorator\AlaskaShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.ArabellaShip" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAgAAAAAAAAAAAAAACEAAAAAAAAAgACAAAQ=</HashCode>
+      <FileName>Decorator\ArabellaShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.EmmaShip" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAgAAAAAAAAAAAAAACEAAAAAAAAAgACAAAQ=</HashCode>
+      <FileName>Decorator\EmmaShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.GhostShip" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAgAAAAAAAAAAAAAACEAAAAAAAAAgACAAAQ=</HashCode>
+      <FileName>Decorator\GhostShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.PharaohShip" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAgAAAAAAAAAAAAAACEAAAAAAAAAgACAAAQ=</HashCode>
+      <FileName>Decorator\PharaohShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.ShipDecorator" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Decorator\ShipDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.Ship" Collapsed="true">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAABIkAoAQAQABAIAAgASEEAQAAAACAgAEAAAw=</HashCode>
+      <FileName>Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.ShipFactory">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShipFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GameObjects.ShipType">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAgIAAAAAAAAAEAAAAgAA=</HashCode>
+      <FileName>ShipType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

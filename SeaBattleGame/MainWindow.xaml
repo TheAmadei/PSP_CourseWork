@@ -1,0 +1,67 @@
+﻿<Window x:Name="mainWindow" x:Class="SeaBattleGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattleGame"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="SeaBattle" Height="800" Width="1500" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="684" VerticalAlignment="Top" Margin="0,0,-0.4,0" Grid.ColumnSpan="2">
+            <StackPanel x:Name="stackPanel" Margin="0,9,0,0">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="seaBattle.png"/>
+                </StackPanel.Background>
+                <ContentControl
+                x:Name="GameArea"
+                Height="675"
+                ClipToBounds="True" 
+                Content="{Binding Content}" Background="#FF03A203" HorizontalAlignment="Left" Width="1494" Margin="0,0,-0.4,0"/>
+
+            </StackPanel>
+        </Grid>
+        <Grid Height="86" VerticalAlignment="Top" Margin="0,684,-0.4,0" HorizontalAlignment="Right" Width="1494" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28*"/>
+                <ColumnDefinition Width="719*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF247889" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                    <GradientStop Color="#FF247889"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="newGameButton" Content="Начать игру" Margin="0,5,938,0" Click="newGameButton_Click" FontSize="55" FontFamily="ASPHALTIC SCRATCH(RUS BY LYAJKA" Height="71" VerticalAlignment="Top" Width="245" RenderTransformOrigin="0.487,0.557" HorizontalAlignment="Right" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Column="1"/>
+            <Label x:Name="labelShips" Content="" HorizontalAlignment="Left" Margin="325,0,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+            <ComboBox x:Name="Ship1ComboBox" HorizontalAlignment="Left" Margin="31,34,0,0" VerticalAlignment="Top" Width="250" SelectedIndex="0" FontFamily="ASPHALTIC SCRATCH(RUS BY LYAJKA" Height="42" FontSize="35" TextOptions.TextHintingMode="Animated" BorderBrush="Black" Grid.ColumnSpan="2">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF0D827B" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <Label Content="Выбор корабля" HorizontalAlignment="Left" Margin="31,-7,0,0" VerticalAlignment="Top" Height="46" FontFamily="Haettenschweiler" FontSize="30" Width="250" Background="{x:Null}" Foreground="Black" BorderBrush="Black" Grid.ColumnSpan="2"/>
+            <Label x:Name="label56" Content="IP адрес сервера" HorizontalAlignment="Left" Margin="505,0,0,0" VerticalAlignment="Top" FontFamily="Haettenschweiler" FontSize="18" Grid.Column="1"/>
+            <Label x:Name="label57" Content="Мой порт" HorizontalAlignment="Left" Margin="735,0,0,0" VerticalAlignment="Top" FontFamily="Haettenschweiler" FontSize="18" Grid.Column="1" Width="65"/>
+            <Label x:Name="label58" Content="Порт сервера" HorizontalAlignment="Left" Margin="908,0,0,0" VerticalAlignment="Top" FontFamily="Haettenschweiler" FontSize="18" Grid.Column="1" Width="92"/>
+            <TextBox x:Name="textBoxIpAddress" HorizontalAlignment="Left" Margin="505,29,0,11" TextWrapping="Wrap" Text="26.7.66.181" Width="170" FontFamily="Haettenschweiler" FontSize="36" Grid.Column="1"/>
+            <TextBox x:Name="textBoxLocalPort" HorizontalAlignment="Left" Height="45" Margin="730,29,0,0" TextWrapping="Wrap" Text="1235" VerticalAlignment="Top" Width="85" RenderTransformOrigin="-0.762,-1.196" FontFamily="Haettenschweiler" FontSize="36" UndoLimit="4" MaxLines="1" MaxLength="4" Grid.Column="1"/>
+            <TextBox x:Name="textBoxRemotePort" HorizontalAlignment="Left" Height="45" Margin="908,29,0,0" TextWrapping="Wrap" Text="5555" VerticalAlignment="Top" Width="80" FontFamily="Haettenschweiler" FontSize="36" UndoLimit="4" MaxLines="1" MaxLength="4" IsUndoEnabled="True" Grid.Column="1"/>
+            <Button x:Name="buttonLocalPortUp" Content="△" HorizontalAlignment="Left" Margin="820,29,0,0" VerticalAlignment="Top" Width="16" Height="20" FontWeight="Bold" Click="buttonLocalPortUp_Click" Grid.Column="1" Background="White" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="buttonLocalPortDown" Content="▽" HorizontalAlignment="Left" Margin="820,54,0,0" VerticalAlignment="Top" Width="16" Height="20" FontWeight="Bold" Click="buttonLocalPortDown_Click" Grid.Column="1" Background="White" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="buttonRemotePortUp" Content="△" HorizontalAlignment="Left" Margin="993,29,0,0" VerticalAlignment="Top" Width="16" Height="20" FontWeight="Bold" Click="buttonRemotePortUp_Click" Grid.Column="1" Background="White" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="buttonRemotePortDown" Content="▽" HorizontalAlignment="Left" Margin="993,54,0,0" VerticalAlignment="Top" Width="16" Height="20" FontWeight="Bold" Click="buttonRemotePortDown_Click" Grid.Column="1" Background="White" BorderBrush="#FFA0A0A0"/>
+            <Label  x:Name="labelReceive" Grid.Column="1" HorizontalAlignment="Left" Margin="1160,29,0,0" VerticalAlignment="Top" FontFamily="Haettenschweiler" FontSize="18" Height="45"/>
+            <Button x:Name="buttonServer" Content="Server" Grid.Column="1" HorizontalAlignment="Left" Margin="1030,7,0,0" VerticalAlignment="Top" Width="100" Height="67" Click="buttonServer_Click" Background="{x:Null}" FontSize="55" FontFamily="ASPHALTIC SCRATCH(RUS BY LYAJKA" BorderBrush="{x:Null}"/>
+        </Grid>
+
+    </Grid>
+
+</Window>
